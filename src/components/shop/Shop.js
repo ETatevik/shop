@@ -5,9 +5,9 @@ import EmptyShop from "./EmptyShop";
 import {randomFiveProduct} from "../../utils/help";
 
 export const Shop = () => {
-    const products = useSelector(state => state.products);
+    const products= useSelector(state => state.products);
     const filterProducts =  randomFiveProduct(products);
-    
+
     return (
         <>
             {filterProducts?.length > 0 ?

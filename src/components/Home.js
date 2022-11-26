@@ -2,33 +2,40 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import {translations} from "../utils/config";
-import {Admin} from "./admin/Admin";
-import {Shop} from "./shop/Shop";
 import TabPanel from "./TabPanel";
 import {a11yProps} from "../utils/help";
+import {MENU} from "../costansts";
+import {useDispatch, useSelector} from "react-redux";
+import {changeMenu} from "../slices/menuSlice";
 
 const Home = () => {
-    const [value, setValue] = React.useState(0);
+    const menuTab = useSelector(state => state.menu);
+    const dispatch = useDispatch();
+    const [value, setValue] = React.useState(menuTab);
 
     const handleChange = (event, newValue) => {
+        dispatch(changeMenu(newValue));
         setValue(newValue);
     };
 
     return (
-        <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box sx={{width: '100%'}}>
+            <Box sx={{borderBottom: 1, borderColor: 'divider'}}>
                 <Tabs centered value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab label={translations.ADMIN} {...a11yProps(0)} />
-                    <Tab label={translations.SHOP} {...a11yProps(1)} />
+                    {
+                        MENU.map(({Id, Name}) =>
+                            <Tab key={`${Id}_${Name}_Tab`} label={Name} {...a11yProps(Id)} />
+                        )
+                    }
                 </Tabs>
             </Box>
-            <TabPanel value={value} index={0}>
-                <Admin/>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                <Shop/>
-            </TabPanel>
+            {
+                MENU.map(({Id, Page, Name}) =>
+                    <TabPanel key={`${Id}_${Name}_TabPanel`} value={value} index={Id}>
+                        <Page/>
+                    </TabPanel>
+                )
+            }
         </Box>
     );
 }
