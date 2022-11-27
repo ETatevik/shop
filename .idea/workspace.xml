@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Need Fix bug about menu FC initialization">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TabPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/EmptyShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/EmptyShop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/Shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/costansts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/costansts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slices/productsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/slices/productsSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/help.js" afterDir="false" />
-    </list>
+    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Need Fix bug about menu FC initialization" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +46,7 @@
       <workItem from="1669399128372" duration="591000" />
       <workItem from="1669399795039" duration="1151000" />
       <workItem from="1669404731156" duration="1645000" />
-      <workItem from="1669466625557" duration="10600000" />
+      <workItem from="1669466625557" duration="10752000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <created>1669486049026</created>
@@ -67,7 +55,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669486049026</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Need Fix bug about menu FC initialization">
+      <created>1669495541738</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669495541738</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
