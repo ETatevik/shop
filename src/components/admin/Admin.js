@@ -8,7 +8,7 @@ import AddProductModal from "./AddProductModal";
 import Typography from "@mui/material/Typography";
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 
-export const Admin = () => {
+const Admin = () => {
     const products = useSelector(state => state.products);
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -30,3 +30,4 @@ export const Admin = () => {
         </div>
     );
 };
+export default Admin;

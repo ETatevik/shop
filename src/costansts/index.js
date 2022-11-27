@@ -1,6 +1,6 @@
 import {translations as translates} from "../utils/config";
-import {Admin} from "../components/admin/Admin";
-import {Shop} from "../components/shop/Shop";
+import Admin from "../components/admin/Admin";
+import Shop from "../components/shop/Shop";
 
 export const PAGE_IDS = {
     ADMIN: 0,

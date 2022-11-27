@@ -4,7 +4,7 @@ import FullShop from "./FullShop";
 import EmptyShop from "./EmptyShop";
 import {randomFiveProduct} from "../../utils/help";
 
-export const Shop = () => {
+const Shop = () => {
     const products= useSelector(state => state.products);
     const filterProducts =  randomFiveProduct(products);
 
@@ -16,8 +16,7 @@ export const Shop = () => {
         </>
     );
 };
-
-
+export default Shop;
 
 
 

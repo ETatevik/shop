@@ -1,9 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {PAGE_IDS} from "../costansts";
 
 const menuSlice = createSlice({
     name: 'menu',
-    initialState: PAGE_IDS.ADMIN,
+    initialState: 0,
     reducers: {
         changeMenu(state, {payload}) {
             return payload;
