@@ -2,6 +2,7 @@ export const translations = {
     ADMIN: "Admin",
     SHOP: "Shop",
     ADD_NEW_PRODUCT: "Add new product",
+    CREATE_NEW_PRODUCT: "Create new product",
     PRODUCTS: "Products",
     EMPTY_BOARD: "There isn't any products",
     REMOVE_ALL: "Remove all products",

@@ -18,9 +18,9 @@ function EmptyShop() {
     return (
         <>
             {isShopPage ?
-                <Box sx={{mb: 10}}>
+                <Box sx={{mb: 3, textAlign: "right"}}>
                     <Button onClick={backToAdminPage} variant="outlined" color="primary">
-                        {translations.ADD_NEW_PRODUCT}
+                        {translations.CREATE_NEW_PRODUCT}
                     </Button>
                 </Box> : null
             }

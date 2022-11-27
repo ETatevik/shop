@@ -7,6 +7,7 @@ import {a11yProps} from "../utils/help";
 import {MENU} from "../costansts";
 import {useDispatch, useSelector} from "react-redux";
 import {changeMenu} from "../slices/menuSlice";
+import {useEffect} from "react";
 
 const Home = () => {
     const menuTab = useSelector(state => state.menu);
@@ -17,6 +18,12 @@ const Home = () => {
         dispatch(changeMenu(newValue));
         setValue(newValue);
     };
+
+    useEffect(() => {
+        if(menuTab !== value){
+            setValue(menuTab);
+        }
+    }, [menuTab, changeMenu])
 
     return (
         <Box sx={{width: '100%'}}>
