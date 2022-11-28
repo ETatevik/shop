@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import { LocalizationProvider } from '@mui/x-date-pickers-pro';
 import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs';
 import { MobileDateRangePicker } from '@mui/x-date-pickers-pro/MobileDateRangePicker';
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 import {translations} from "../../utils/config";
 
 const DatePicker = ({startDate, endDate, handleChangeStartDate, handleChangeEndDate}) => {
@@ -15,7 +15,7 @@ const DatePicker = ({startDate, endDate, handleChangeStartDate, handleChangeEndD
     useEffect(() => {
         if(value[0]) handleChangeStartDate(value[0]?.$d);
         if(value[1]) handleChangeEndDate(value[1]?.$d)
-    }, value, setValue);
+    }, [value, setValue]);
 
     return (
         <Stack spacing={3}>

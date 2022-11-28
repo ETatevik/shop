@@ -1,16 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import { Form, Field } from "react-final-form";
+import {Form} from "react-final-form";
 import {
     Paper,
     Grid,
     Button,
     Box,
-    TextField,
-    Modal, Alert
+    Modal,
+    Alert
 } from "@mui/material";
 import {translations} from "../../utils/config";
 import Typography from "@mui/material/Typography";
-import DatePicker from "./DatePicker";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import ShowProduct from "./ShowProduct";
 import Add from "./Add";
@@ -45,19 +44,19 @@ function AddProductModal({open, onClose}) {
     const [errorMessage, setErrorMessage] = useState('');
     const dispatch = useDispatch();
 
-    useEffect( ()=> {
+    useEffect(() => {
         setErrorMessage(false);
-        if(name && price && weight && stDate && enDate){
-            if(isNumber(price) && isNumber(weight)){
+        if (name && price && weight && stDate && enDate) {
+            if (isNumber(price) && isNumber(weight)) {
                 setProduct({
-                    id: Math.round(Math.random()*1000),
+                    id: Math.round(Math.random() * 1000),
                     name: name,
                     price: price,
                     weight: weight,
                     startDate: stDate,
                     endDate: enDate
                 })
-            } else{
+            } else {
                 setErrorMessage(translations.ONLY_NUMBER_ERROR);
             }
         } else {
@@ -66,15 +65,15 @@ function AddProductModal({open, onClose}) {
     }, [name, setName, price, setPrice, weight, setWeight, stDate, setStDate, enDate, setEnDate])
 
     useEffect(() => {
-        if(Object.keys(product).length > 0) {
+        if (Object.keys(product).length > 0) {
             setDisabledAddMoreProduct(false);
         }
     }, [product, setProduct]);
 
     const handlerAddMoreProduct = () => {
-        if(productsList?.length > 0
+        if (productsList?.length > 0
             && (productsList.find(({name}) => name === product.name)
-            || (products.length > 0 && products.find(({name}) => name === product.name)))){
+                || (products.length > 0 && products.find(({name}) => name === product.name)))) {
             setErrorMessage(translations.SAME_NAME_ERROR);
         } else {
             setErrorMessage('');
@@ -84,7 +83,7 @@ function AddProductModal({open, onClose}) {
     }
 
     const onSubmit = () => {
-        if(Object.keys(productsList).length > 0) {
+        if (Object.keys(productsList).length > 0) {
             dispatch(addProduct(productsList));
             setName('');
             setPrice('');
@@ -94,8 +93,8 @@ function AddProductModal({open, onClose}) {
             setProductsList([]);
             setDisabledAddMoreProduct(false);
         } else {
-            if(Object.keys(product).length > 0) {
-                if(products.length > 0 && !!products.find(({name}) => name === product.name)) {
+            if (Object.keys(product).length > 0) {
+                if (products.length > 0 && !!products.find(({name}) => name === product.name)) {
                     setErrorMessage(translations.SAME_NAME_ERROR);
                     return;
                 }
@@ -126,13 +125,13 @@ function AddProductModal({open, onClose}) {
             <Box style={style}>
                 <Form
                     onSubmit={onSubmit}
-                    render={({ handleSubmit}) => (
+                    render={({handleSubmit}) => (
                         <form onSubmit={handleSubmit}>
-                            <Paper style={{ padding: 16 }}>
-                                <Typography variant="h5" sx={{mb:3}}>{translations.NEW_PRODUCT}</Typography>
-                                <Grid  container alignItems="center" spacing={2}>
+                            <Paper style={{padding: 16}}>
+                                <Typography variant="h5" sx={{mb: 3}}>{translations.NEW_PRODUCT}</Typography>
+                                <Grid container alignItems="center" spacing={2}>
                                     {productsList.length > 0 ?
-                                        <ShowProduct products={productsList} /> : null
+                                        <ShowProduct products={productsList}/> : null
                                     }
                                     <Add
                                         name={name}
@@ -146,7 +145,8 @@ function AddProductModal({open, onClose}) {
                                         enDate={enDate}
                                         setEnDate={setEnDate}/>
                                     <Grid item sx={12} md={2} textAlign="center">
-                                        <Button disabled={disabledAddMoreProduct} onClick={handlerAddMoreProduct} variant="outlined" title={translations.ADD_MORE}>
+                                        <Button disabled={disabledAddMoreProduct} onClick={handlerAddMoreProduct}
+                                                variant="outlined" title={translations.ADD_MORE}>
                                             <AddCircleOutlineOutlinedIcon/>
                                         </Button>
                                     </Grid>
@@ -156,7 +156,7 @@ function AddProductModal({open, onClose}) {
                                         </Grid>
                                     }
                                 </Grid>
-                                <Grid item xs={12} style={{ marginTop: 30, textAlign: "center" }}>
+                                <Grid item xs={12} style={{marginTop: 30, textAlign: "center"}}>
                                     <Button
                                         variant="contained"
                                         color="primary"

@@ -23,7 +23,7 @@ const Home = () => {
         if(menuTab !== value){
             setValue(menuTab);
         }
-    }, [menuTab, changeMenu])
+    }, [menuTab])
 
     return (
         <Box sx={{width: '100%'}}>

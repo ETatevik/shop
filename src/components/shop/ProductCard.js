@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Button, CardContent} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {translations} from "../../utils/config";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import {removeProduct} from "../../slices/productsSlice";
 

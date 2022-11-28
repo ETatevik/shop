@@ -5,6 +5,7 @@ import Stack from "@mui/material/Stack";
 import {useDispatch, useSelector} from "react-redux";
 import {PAGE_IDS} from "../../costansts";
 import {changeMenu} from "../../slices/menuSlice";
+import {toggleModal} from "../../slices/productModalSlice";
 
 function EmptyShop() {
     const menu = useSelector(state => state.menu);
@@ -12,7 +13,8 @@ function EmptyShop() {
     const dispatch = useDispatch();
 
     const backToAdminPage = () => {
-        dispatch(changeMenu(PAGE_IDS.ADMIN))
+        dispatch(changeMenu(PAGE_IDS.ADMIN));
+        dispatch(toggleModal(true));
     };
 
     return (

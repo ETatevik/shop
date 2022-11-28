@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { translations } from "../../utils/config";
 import {useSelector} from "react-redux";
 import EmptyShop from "../shop/EmptyShop";
@@ -10,9 +10,16 @@ import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOu
 
 const Admin = () => {
     const products = useSelector(state => state.products);
-    const [open, setOpen] = useState(false);
+    const productModal = useSelector(state => state.productModal);
+    const [open, setOpen] = useState(productModal);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    useEffect(() => {
+        if(open !== productModal){
+            setOpen(productModal);
+        }
+    }, [productModal])
 
     return (
         <div className="sp-admin_wrapper">
