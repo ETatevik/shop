@@ -19,16 +19,16 @@ function EmptyShop() {
 
     return (
         <>
+            <Stack sx={{width: '100%'}} spacing={2}>
+                <Alert severity="info">{translations.EMPTY_BOARD}</Alert>
+            </Stack>
             {isShopPage ?
-                <Box sx={{mb: 3, textAlign: "right"}}>
+                <Box sx={{mt: 3, textAlign: "right"}}>
                     <Button onClick={backToAdminPage} variant="outlined" color="primary">
                         {translations.CREATE_NEW_PRODUCT}
                     </Button>
                 </Box> : null
             }
-            <Stack sx={{width: '100%'}} spacing={2}>
-                <Alert severity="info">{translations.EMPTY_BOARD}</Alert>
-            </Stack>
         </>
     );
 }

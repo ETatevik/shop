@@ -1,8 +1,10 @@
+import {data} from "../utils/config";
+
 const {createSlice} = require("@reduxjs/toolkit");
 
 const productsSlice = createSlice({
     name: 'products',
-    initialState: [],
+    initialState: data,
     reducers: {
         addProduct(state, {payload}) {
             state.push(...payload);
@@ -10,9 +12,12 @@ const productsSlice = createSlice({
         removeProduct(state, {payload}) {
             return state.filter(({id}) => id !== payload);
         },
+        removeAllProducts() {
+            return [];
+        }
     },
 })
 
-export const {addProduct, removeProduct} = productsSlice.actions;
+export const {addProduct, removeProduct, removeAllProducts} = productsSlice.actions;
 
 export default productsSlice.reducer;

@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Back to Admin page issue">
+    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Fixing bug go to Admin page from Shop page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/AddProductModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddProductModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/DatePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/DatePicker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shop/EmptyShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/EmptyShop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/ProductCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/ProductCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/ShopItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/ShopItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shop/FullShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/FullShop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slices/productsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/slices/productsSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,8 @@
       <workItem from="1669399795039" duration="1151000" />
       <workItem from="1669404731156" duration="1645000" />
       <workItem from="1669466625557" duration="18896000" />
-      <workItem from="1669659485679" duration="2132000" />
+      <workItem from="1669659485679" duration="2640000" />
+      <workItem from="1669744925718" duration="1272000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <created>1669486049026</created>
@@ -95,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669578131201</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Toggle Modal and need fix bug go to Admin page from Shop page">
+      <created>1669665239314</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669665239314</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +122,8 @@
     <MESSAGE value="Add Menu in the store" />
     <MESSAGE value="Fixed bug in Menu" />
     <MESSAGE value="Back to Admin page issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Back to Admin page issue" />
+    <MESSAGE value="Toggle Modal and need fix bug go to Admin page from Shop page" />
+    <MESSAGE value="Fixing bug go to Admin page from Shop page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing bug go to Admin page from Shop page" />
   </component>
 </project>
