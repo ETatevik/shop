@@ -18,7 +18,8 @@ export const translations = {
     CREAT: "Creat",
     ADD_MORE: "Add More",
     SAME_NAME_ERROR: "There is already have same name product",
-    ONLY_NUMBER_ERROR: "Please enter only a number for price and weight"
+    ONLY_NUMBER_ERROR: "Please enter only a number for price and weight",
+    EXPIRED_PRODUCT:"This product is expired",
 }
 
 export const data = [
@@ -27,8 +28,8 @@ export const data = [
         name: 'Product 1',
         price: 100,
         weight: 52,
-        startDate: new Date(2022, 10, 10),
-        endDate: new Date(2022, 12, 1)
+        startDate: new Date(2022, 9, 10),
+        endDate: new Date(2022, 10, 1)
     },
     {
         id: 2,
@@ -36,23 +37,23 @@ export const data = [
         price: 200,
         weight: 100,
         startDate: new Date(2022, 10, 10),
-        endDate: new Date(2022, 12, 1)
+        endDate: new Date(2022, 11, 1)
     },
     {
         id: 3,
         name: 'Product 3',
         price: 100,
         weight: 10,
-        startDate: new Date(2022, 10, 10),
-        endDate: new Date(2022, 12, 1)
+        startDate: new Date(2022, 9, 10),
+        endDate: new Date(2022, 11, 1)
     },
     {
         id: 4,
         name: 'Product 4',
         price: 45,
         weight: 85,
-        startDate: new Date(2022, 10, 10),
-        endDate: new Date(2022, 12, 1)
+        startDate: new Date(2022, 9, 10),
+        endDate: new Date(2022, 10, 1)
     },
     {
         id: 5,
@@ -60,6 +61,46 @@ export const data = [
         price: 78,
         weight: 44,
         startDate: new Date(2022, 10, 10),
-        endDate: new Date(2022, 12, 1)
+        endDate: new Date(2022, 11, 1)
+    },
+    {
+        id: 6,
+        name: 'Product 6',
+        price: 100,
+        weight: 5,
+        startDate: new Date(2022, 9, 10),
+        endDate: new Date(2022, 10, 1)
+    },
+    {
+        id: 7,
+        name: 'Product 7',
+        price: 200,
+        weight: 10,
+        startDate: new Date(2022, 9, 10),
+        endDate: new Date(2022, 10, 1)
+    },
+    {
+        id: 8,
+        name: 'Product 8',
+        price: 100,
+        weight: 80,
+        startDate: new Date(2022, 9, 10),
+        endDate: new Date(2022, 10, 1)
+    },
+    {
+        id: 9,
+        name: 'Product 9',
+        price: 45,
+        weight: 895,
+        startDate: new Date(2022, 9, 10),
+        endDate: new Date(2022, 10, 1)
+    },
+    {
+        id: 10,
+        name: 'Product 10',
+        price: 78,
+        weight: 424,
+        startDate: new Date(2022, 9, 10),
+        endDate: new Date(2022, 11, 1)
     }
 ]

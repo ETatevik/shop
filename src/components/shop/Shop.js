@@ -6,7 +6,7 @@ import {randomFiveProduct} from "../../utils/help";
 
 const Shop = () => {
     const products= useSelector(state => state.products);
-    const filterProducts =  randomFiveProduct(products);
+    const filterProducts =  randomFiveProduct(products); //TODO: Change logic for show products
 
     return (
         <>
