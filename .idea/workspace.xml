@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Show in product expired Icon">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/ProductCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/ProductCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/Shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
       <workItem from="1669404731156" duration="1645000" />
       <workItem from="1669466625557" duration="18896000" />
       <workItem from="1669659485679" duration="2640000" />
-      <workItem from="1669744925718" duration="3692000" />
+      <workItem from="1669744925718" duration="3810000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <created>1669486049026</created>
@@ -106,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669746220084</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Show in product expired Icon">
+      <created>1669835936412</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669835936412</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
