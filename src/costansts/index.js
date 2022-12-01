@@ -19,3 +19,26 @@ export const MENU = [
         Page: Shop
     },
 ]
+
+export const FILTER_BY_LIST = [
+    {
+        Value: 0,
+        Title: translates.REMOVE_FILTER_BY
+    },
+    {
+        Value: 1,
+        Title: translates.FILTER_BY_NAME
+    },
+    {
+        Value: 2,
+        Title: translates.FILTER_BY_PRICE
+    },
+    {
+        Value: 3,
+        Title: translates.FILTER_BY_WEIGHT
+    },
+    {
+        Value: 4,
+        Title: translates.FILTER_BY_DATE
+    }
+]

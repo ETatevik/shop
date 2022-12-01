@@ -2,16 +2,21 @@ import * as React from 'react';
 import { useSelector } from "react-redux";
 import FullShop from "./FullShop";
 import EmptyShop from "./EmptyShop";
-import {randomFiveProduct} from "../../utils/help";
+import {allAvailableProducts} from "../../utils/help";
+import Filter from "../Filter";
 
 const Shop = () => {
     const products= useSelector(state => state.products);
-    const filterProducts =  randomFiveProduct(products); //TODO: Change logic for show products
+    const filterProducts =  allAvailableProducts(products);
 
     return (
         <>
             {filterProducts?.length > 0 ?
-                <FullShop products={filterProducts} /> : <EmptyShop/>
+                <>
+                    <Filter/>
+                    <FullShop products={filterProducts} />
+                </>
+                : <EmptyShop/>
             }
         </>
     );

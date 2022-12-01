@@ -20,6 +20,12 @@ export const translations = {
     SAME_NAME_ERROR: "There is already have same name product",
     ONLY_NUMBER_ERROR: "Please enter only a number for price and weight",
     EXPIRED_PRODUCT:"This product is expired",
+    FILTER_BY: "Filter by",
+    FILTER_BY_NAME: "Name",
+    FILTER_BY_PRICE: "Price",
+    FILTER_BY_WEIGHT: "Weight",
+    FILTER_BY_DATE: "Date",
+    REMOVE_FILTER_BY: "Remove Filter",
 }
 
 export const data = [
@@ -37,7 +43,7 @@ export const data = [
         price: 200,
         weight: 100,
         startDate: new Date(2022, 10, 10),
-        endDate: new Date(2022, 11, 1)
+        endDate: new Date(2023, 11, 1)
     },
     {
         id: 3,
@@ -45,7 +51,7 @@ export const data = [
         price: 100,
         weight: 10,
         startDate: new Date(2022, 9, 10),
-        endDate: new Date(2022, 11, 1)
+        endDate: new Date(2023, 11, 1)
     },
     {
         id: 4,
@@ -61,7 +67,7 @@ export const data = [
         price: 78,
         weight: 44,
         startDate: new Date(2022, 10, 10),
-        endDate: new Date(2022, 11, 1)
+        endDate: new Date(2023, 11, 1)
     },
     {
         id: 6,
@@ -101,6 +107,6 @@ export const data = [
         price: 78,
         weight: 424,
         startDate: new Date(2022, 9, 10),
-        endDate: new Date(2022, 11, 1)
+        endDate: new Date(2023, 11, 1)
     }
 ]

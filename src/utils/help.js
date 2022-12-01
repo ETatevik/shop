@@ -6,7 +6,7 @@ export function a11yProps(index) {
 }
 
 
-export function randomFiveProduct(products) {
+export function allAvailableProducts(products) {
     let copyProducts = [...products];
     copyProducts = copyProducts.filter(({endDate}) => !expiredProduct(endDate));
     copyProducts.sort((a, b) => b.weight - a.weight);
