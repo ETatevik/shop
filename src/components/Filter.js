@@ -2,11 +2,19 @@ import React, {useState} from 'react';
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import {translations} from "../utils/config";
 import {FILTER_BY_LIST} from "../costansts";
+import {useDispatch} from "react-redux";
+import {filterBy} from "../slices/filterSlice";
 
 function Filter() {
+    const dispatch = useDispatch();
     const [filterby, setFilterby] = useState('');
     const handleFilterChange = (e) => {
-        setFilterby(e.target.value);
+        if(e.target.value === 0){
+            setFilterby('');
+        } else {
+            setFilterby(e.target.value);
+        }
+        dispatch(filterBy(e.target.value));
     }
 
     return (

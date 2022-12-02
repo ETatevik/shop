@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="hide idea in gitignore">
+    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Filter Logic">
+      <change afterPath="$PROJECT_DIR$/src/slices/filterSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shop/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/Shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/costansts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/costansts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/help.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +56,7 @@
       <workItem from="1669404731156" duration="1645000" />
       <workItem from="1669466625557" duration="18896000" />
       <workItem from="1669659485679" duration="2640000" />
-      <workItem from="1669744925718" duration="6603000" />
+      <workItem from="1669744925718" duration="8336000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <created>1669486049026</created>
@@ -120,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669836032036</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Create Filter Component &#10;TODO: Add Filter logic">
+      <created>1669922238374</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669922238374</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Create Filter Component &#10;TODO: Add Filter logic">
+      <created>1670007129180</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670007129180</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +161,8 @@
     <MESSAGE value="Toggle Modal and need fix bug go to Admin page from Shop page" />
     <MESSAGE value="Fixing bug go to Admin page from Shop page" />
     <MESSAGE value="hide idea in gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="hide idea in gitignore" />
+    <MESSAGE value="Create Filter Component &#10;TODO: Add Filter logic" />
+    <MESSAGE value="Filter Logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter Logic" />
   </component>
 </project>

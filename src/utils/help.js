@@ -9,8 +9,6 @@ export function a11yProps(index) {
 export function allAvailableProducts(products) {
     let copyProducts = [...products];
     copyProducts = copyProducts.filter(({endDate}) => !expiredProduct(endDate));
-    copyProducts.sort((a, b) => b.weight - a.weight);
-
     return copyProducts;
     // if (copyProducts.length <= 5) {
     //     return copyProducts
@@ -50,4 +48,19 @@ export function isNumber(number) {
 
 export function expiredProduct(endDate) {
     return endDate < new Date();
+}
+
+export function filterAvailableProducts(products, filterType){
+    switch (filterType) {
+        case 1:
+            return [...products].sort((a, b) => a.name - b.name);
+        case 2:
+            return [...products].sort((a, b) => a.price - b.price);
+        case 3:
+            return [...products].sort((a, b) => a.weight - b.weight);
+        case 4:
+            return [...products].sort((a, b) => a.startDate - b.startDate);
+        default:
+            return products;
+    }
 }
