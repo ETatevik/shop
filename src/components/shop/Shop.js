@@ -6,7 +6,7 @@ import {allAvailableProducts, filterAvailableProducts} from "../../utils/help";
 import Filter from "../Filter";
 
 const Shop = () => {
-    const products= useSelector(state => state.products);
+    const products= useSelector(state => state.products.productLists);
     const filterByType = useSelector(state => state.filterByType)
     const allProducts =  allAvailableProducts(products, filterByType);
     const filterProducts = filterAvailableProducts(allProducts, filterByType);

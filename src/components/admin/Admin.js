@@ -11,7 +11,7 @@ import {removeAllProducts} from "../../slices/productsSlice";
 import {toggleModal} from "../../slices/productModalSlice";
 
 const Admin = () => {
-    const products = useSelector(state => state.products);
+    const products = useSelector(state => state.products.productLists);
     const productModal = useSelector(state => state.productModal);
     const dispatch = useDispatch();
     const [open, setOpen] = useState(productModal);

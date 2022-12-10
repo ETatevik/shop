@@ -2,18 +2,22 @@ import {data} from "../utils/config";
 
 const {createSlice} = require("@reduxjs/toolkit");
 
+const initialState = {
+    productLists : [...data]
+}
+
 const productsSlice = createSlice({
     name: 'products',
-    initialState: data,
+    initialState,
     reducers: {
         addProduct(state, {payload}) {
-            state.push(...payload);
+            state.productLists.push(...payload);
         },
         removeProduct(state, {payload}) {
-            return state.filter(({id}) => id !== payload);
+            state.productLists = state.productLists.filter(({id}) => id !== payload);
         },
-        removeAllProducts() {
-            return [];
+        removeAllProducts(state) {
+            state.productLists = [];
         }
     },
 })

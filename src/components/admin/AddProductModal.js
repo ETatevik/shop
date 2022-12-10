@@ -33,7 +33,7 @@ const style = {
 
 function AddProductModal({open, onClose}) {
     const [productsList, setProductsList] = useState([]);
-    const products = useSelector(state => state.products);
+    const products = useSelector(state => state.products.productLists);
     const [product, setProduct] = useState({});
     const [disabledAddMoreProduct, setDisabledAddMoreProduct] = useState(true);
     const [name, setName] = useState();

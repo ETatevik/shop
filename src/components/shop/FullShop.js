@@ -11,7 +11,7 @@ function FullShop({products, justifyContentLeft, remove, removeProducts}) {
     return (
         <>
             <Stack
-                direction={{sx: 'column', md: 'row'}}
+                direction={{sx: 'column', sm: 'row'}}
                 justifyContent={Boolean(justifyContentLeft) ? "left" : "center"}
                 flexWrap="wrap"
                 alignItems="center"
