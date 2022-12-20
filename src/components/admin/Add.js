@@ -1,6 +1,5 @@
 import React from 'react';
 import {Grid, TextField} from "@mui/material";
-import {Field} from "react-final-form";
 import {translations} from "../../utils/config";
 import DatePicker from "./DatePicker";
 
@@ -8,11 +7,10 @@ function Add({name, setName, price, setPrice, weight, setWeight, stDate, setStDa
     return (
         <>
             <Grid item sx={12} md={2}>
-                <Field
+                <TextField
                     fullWidth
                     required
                     name={`product_${translations.NAME}`}
-                    component={TextField}
                     type="text"
                     label={translations.NAME}
                     value={name}
@@ -20,11 +18,10 @@ function Add({name, setName, price, setPrice, weight, setWeight, stDate, setStDa
                 />
             </Grid>
             <Grid item sx={12} md={2}>
-                <Field
+                <TextField
                     fullWidth
                     required
                     name={`product_${translations.PRICE}`}
-                    component={TextField}
                     type="number"
                     label={translations.PRICE}
                     value={price}
@@ -32,11 +29,10 @@ function Add({name, setName, price, setPrice, weight, setWeight, stDate, setStDa
                 />
             </Grid>
             <Grid item sx={12} md={2}>
-                <Field
+                <TextField
                     fullWidth
                     required
                     name={`product_${translations.WEIGHT}`}
-                    component={TextField}
                     type="number"
                     label={translations.WEIGHT}
                     value={weight}

@@ -77,6 +77,11 @@ function AddProductModal({open, onClose}) {
             setErrorMessage(translations.SAME_NAME_ERROR);
         } else {
             setErrorMessage('');
+            setName('');
+            setPrice('');
+            setWeight('');
+            setStDate(null);
+            setEnDate(null);
             setProductsList(prevArray => [...prevArray, product]);
             setDisabledAddMoreProduct(true);
         }

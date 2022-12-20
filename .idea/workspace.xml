@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Filter Logic">
+    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Change expired and available login, and new slice for product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/AddProductModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddProductModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/FullShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/FullShop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/ProductCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/ProductCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/Shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slices/productsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/slices/productsSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/TOSHIBA/Desktop/shop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TOSHIBA/Desktop/minimalistRoom&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -82,7 +75,10 @@
       <workItem from="1670438968283" duration="492000" />
       <workItem from="1670439513224" duration="1197000" />
       <workItem from="1670481573560" duration="1191000" />
-      <workItem from="1670698934719" duration="1485000" />
+      <workItem from="1670698934719" duration="2031000" />
+      <workItem from="1670796981013" duration="2634000" />
+      <workItem from="1671040278854" duration="130000" />
+      <workItem from="1671557644025" duration="567000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <created>1669486049026</created>
@@ -161,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670007129180</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Change expired and available login, and new slice for product">
+      <created>1670700690452</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670700690452</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +192,7 @@
     <MESSAGE value="hide idea in gitignore" />
     <MESSAGE value="Create Filter Component &#10;TODO: Add Filter logic" />
     <MESSAGE value="Filter Logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter Logic" />
+    <MESSAGE value="Change expired and available login, and new slice for product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change expired and available login, and new slice for product" />
   </component>
 </project>
