@@ -7,7 +7,7 @@ import {Button} from "@mui/material";
 import AddProductModal from "./AddProductModal";
 import Typography from "@mui/material/Typography";
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
-import {removeAllProducts} from "../../slices/productsSlice";
+import {cancelEditProduct, removeAllProducts} from "../../slices/productsSlice";
 import {toggleModal} from "../../slices/productModalSlice";
 
 const Admin = () => {
@@ -21,6 +21,7 @@ const Admin = () => {
     }
     const handleClose = () => {
         dispatch(toggleModal(false));
+        dispatch(cancelEditProduct());
         setOpen(false);
     }
 

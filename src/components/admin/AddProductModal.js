@@ -14,7 +14,7 @@ import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOu
 import ShowProduct from "./ShowProduct";
 import Add from "./Add";
 import {useDispatch, useSelector} from "react-redux";
-import {addProduct} from "../../slices/productsSlice";
+import {addProduct, cancelEditProduct} from "../../slices/productsSlice";
 import {isEmpty, isNumber} from "../../utils/help";
 
 const style = {
@@ -129,36 +129,15 @@ function AddProductModal({open, onClose}) {
     };
 
     const onEditProduct = () => {
-        if (Object.keys(productsList).length > 0) {
-            dispatch(addProduct(productsList));
-            setName('');
-            setPrice('');
-            setWeight('');
-            setStDate(null);
-            setEnDate(null);
-            setProductsList([]);
-            setDisabledAddMoreProduct(false);
-        } else {
-            if (Object.keys(product).length > 0) {
-                if (products.length > 0 && !!products.find(({name}) => name === product.name)) {
-                    setErrorMessage(translations.SAME_NAME_ERROR);
-                    return;
-                }
-                dispatch(addProduct([product]));
-                setName('');
-                setPrice('');
-                setWeight('');
-                setStDate(null);
-                setEnDate(null);
-                setProductsList([]);
-                setDisabledAddMoreProduct(false);
-            } else {
-                setErrorMessage(translations.SAME_NAME_ERROR);
-                return;
-            }
-        }
+        alert('Need working');
+        dispatch(cancelEditProduct());
         onClose();
     };
+
+    const onCancelEdit = () => {
+        dispatch(cancelEditProduct());
+        onClose();
+    }
 
     return (
         <Modal
@@ -217,6 +196,7 @@ function AddProductModal({open, onClose}) {
                                             color="error"
                                             type="button"
                                             sx={{ml: 2}}
+                                            onClick={onCancelEdit}
                                         >
                                             {translations.CANCEL}
                                         </Button>}

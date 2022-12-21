@@ -32,10 +32,13 @@ const productsSlice = createSlice({
                 }
             });
             state.editProduct = {};
+        },
+        cancelEditProduct(state) {
+            state.editProduct = {};
         }
     },
 })
 
-export const {addProduct, removeProduct, removeAllProducts, setEditProduct, saveEditProduct} = productsSlice.actions;
+export const {addProduct, removeProduct, removeAllProducts, setEditProduct, saveEditProduct, cancelEditProduct} = productsSlice.actions;
 
 export default productsSlice.reducer;

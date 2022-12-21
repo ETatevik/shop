@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Change expired and available login, and new slice for product">
+    <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Need TODO edit logic in modal page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/admin/AddProductModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddProductModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shop/ProductCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/ProductCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/slices/productsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/slices/productsSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/help.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +81,7 @@
       <workItem from="1670796981013" duration="2634000" />
       <workItem from="1671040278854" duration="130000" />
       <workItem from="1671557644025" duration="915000" />
-      <workItem from="1671647455960" duration="2217000" />
+      <workItem from="1671647455960" duration="3146000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <created>1669486049026</created>
@@ -170,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670700690452</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Need TODO edit logic in modal page">
+      <created>1671649732461</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671649732461</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +203,7 @@
     <MESSAGE value="Create Filter Component &#10;TODO: Add Filter logic" />
     <MESSAGE value="Filter Logic" />
     <MESSAGE value="Change expired and available login, and new slice for product" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change expired and available login, and new slice for product" />
+    <MESSAGE value="Need TODO edit logic in modal page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Need TODO edit logic in modal page" />
   </component>
 </project>
