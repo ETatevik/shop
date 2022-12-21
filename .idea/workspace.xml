@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8910d536-fefc-4416-8f1c-24e0079c6638" name="Changes" comment="Change expired and available login, and new slice for product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/AddProductModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddProductModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shop/ProductCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shop/ProductCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slices/productsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/slices/productsSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/help.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +83,8 @@
       <workItem from="1670698934719" duration="2031000" />
       <workItem from="1670796981013" duration="2634000" />
       <workItem from="1671040278854" duration="130000" />
-      <workItem from="1671557644025" duration="567000" />
+      <workItem from="1671557644025" duration="915000" />
+      <workItem from="1671647455960" duration="2217000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <created>1669486049026</created>

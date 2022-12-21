@@ -15,7 +15,7 @@ import ShowProduct from "./ShowProduct";
 import Add from "./Add";
 import {useDispatch, useSelector} from "react-redux";
 import {addProduct} from "../../slices/productsSlice";
-import {isNumber} from "../../utils/help";
+import {isEmpty, isNumber} from "../../utils/help";
 
 const style = {
     position: 'absolute',
@@ -34,6 +34,7 @@ const style = {
 function AddProductModal({open, onClose}) {
     const [productsList, setProductsList] = useState([]);
     const products = useSelector(state => state.products.productLists);
+    const editProduct = useSelector(state => state.products.editProduct);
     const [product, setProduct] = useState({});
     const [disabledAddMoreProduct, setDisabledAddMoreProduct] = useState(true);
     const [name, setName] = useState();
@@ -69,6 +70,14 @@ function AddProductModal({open, onClose}) {
             setDisabledAddMoreProduct(false);
         }
     }, [product, setProduct]);
+
+    useEffect(() => {
+        setName(editProduct.name);
+        setPrice(editProduct.price);
+        setWeight(editProduct.weight);
+        setStDate(editProduct.startDate);
+        setEnDate(editProduct.endDate);
+    }, [editProduct]);
 
     const handlerAddMoreProduct = () => {
         if (productsList?.length > 0
@@ -119,6 +128,38 @@ function AddProductModal({open, onClose}) {
         onClose();
     };
 
+    const onEditProduct = () => {
+        if (Object.keys(productsList).length > 0) {
+            dispatch(addProduct(productsList));
+            setName('');
+            setPrice('');
+            setWeight('');
+            setStDate(null);
+            setEnDate(null);
+            setProductsList([]);
+            setDisabledAddMoreProduct(false);
+        } else {
+            if (Object.keys(product).length > 0) {
+                if (products.length > 0 && !!products.find(({name}) => name === product.name)) {
+                    setErrorMessage(translations.SAME_NAME_ERROR);
+                    return;
+                }
+                dispatch(addProduct([product]));
+                setName('');
+                setPrice('');
+                setWeight('');
+                setStDate(null);
+                setEnDate(null);
+                setProductsList([]);
+                setDisabledAddMoreProduct(false);
+            } else {
+                setErrorMessage(translations.SAME_NAME_ERROR);
+                return;
+            }
+        }
+        onClose();
+    };
+
     return (
         <Modal
             open={open}
@@ -129,7 +170,7 @@ function AddProductModal({open, onClose}) {
         >
             <Box style={style}>
                 <Form
-                    onSubmit={onSubmit}
+                    onSubmit={isEmpty(editProduct) ? onSubmit : onEditProduct}
                     render={({handleSubmit}) => (
                         <form onSubmit={handleSubmit}>
                             <Paper style={{padding: 16}}>
@@ -149,12 +190,13 @@ function AddProductModal({open, onClose}) {
                                         setStDate={setStDate}
                                         enDate={enDate}
                                         setEnDate={setEnDate}/>
-                                    <Grid item sx={12} md={2} textAlign="center">
-                                        <Button disabled={disabledAddMoreProduct} onClick={handlerAddMoreProduct}
-                                                variant="outlined" title={translations.ADD_MORE}>
-                                            <AddCircleOutlineOutlinedIcon/>
-                                        </Button>
-                                    </Grid>
+                                    {isEmpty(editProduct) &&
+                                        <Grid item sx={12} md={2} textAlign="center">
+                                            <Button disabled={disabledAddMoreProduct} onClick={handlerAddMoreProduct}
+                                                    variant="outlined" title={translations.ADD_MORE}>
+                                                <AddCircleOutlineOutlinedIcon/>
+                                            </Button>
+                                        </Grid>}
                                     {errorMessage &&
                                         <Grid item xs={12} textAlign="right">
                                             <Alert severity="error">{errorMessage}</Alert>
@@ -167,8 +209,17 @@ function AddProductModal({open, onClose}) {
                                         color="primary"
                                         type="submit"
                                     >
-                                        {translations.CREAT}
+                                        {isEmpty(editProduct) ? translations.CREAT : translations.EDIT}
                                     </Button>
+                                    {!isEmpty(editProduct) &&
+                                        <Button
+                                            variant="contained"
+                                            color="error"
+                                            type="button"
+                                            sx={{ml: 2}}
+                                        >
+                                            {translations.CANCEL}
+                                        </Button>}
                                 </Grid>
                             </Paper>
                         </form>

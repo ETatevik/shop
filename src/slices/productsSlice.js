@@ -3,7 +3,8 @@ import {data} from "../utils/config";
 const {createSlice} = require("@reduxjs/toolkit");
 
 const initialState = {
-    productLists : [...data]
+    productLists : [...data],
+    editProduct: {}
 }
 
 const productsSlice = createSlice({
@@ -18,10 +19,23 @@ const productsSlice = createSlice({
         },
         removeAllProducts(state) {
             state.productLists = [];
+        },
+        setEditProduct(state, {payload}) {
+            state.editProduct = state.productLists.find(({id}) => id === payload);
+        },
+        saveEditProduct(state, {payload}) {
+            state.productLists = state.productLists.map( item => {
+                if(item.id === payload.id) {
+                    Object.keys(payload).forEach((key) => {
+                        item[key] = payload[key];
+                    });
+                }
+            });
+            state.editProduct = {};
         }
     },
 })
 
-export const {addProduct, removeProduct, removeAllProducts} = productsSlice.actions;
+export const {addProduct, removeProduct, removeAllProducts, setEditProduct, saveEditProduct} = productsSlice.actions;
 
 export default productsSlice.reducer;

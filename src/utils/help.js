@@ -64,3 +64,15 @@ export function filterAvailableProducts(products, filterType){
             return products;
     }
 }
+
+export function isEmpty(any) {
+    const typeof_any = typeof any;
+    switch (typeof_any.toLowerCase()) {
+        case 'array':
+            return any.length === 0;
+        case 'object':
+            return Object.keys(any).length === 0;
+        default:
+            return false;
+    }
+}
