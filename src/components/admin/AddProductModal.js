@@ -14,7 +14,7 @@ import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOu
 import ShowProduct from "./ShowProduct";
 import Add from "./Add";
 import {useDispatch, useSelector} from "react-redux";
-import {addProduct, cancelEditProduct} from "../../slices/productsSlice";
+import {addProduct, cancelEditProduct, saveEditProduct} from "../../slices/productsSlice";
 import {isEmpty, isNumber} from "../../utils/help";
 
 const style = {
@@ -50,7 +50,7 @@ function AddProductModal({open, onClose}) {
         if (name && price && weight && stDate && enDate) {
             if (isNumber(price) && isNumber(weight)) {
                 setProduct({
-                    id: Math.round(Math.random() * 1000),
+                    id: isEmpty(editProduct) ?  Math.round(Math.random() * 1000) : editProduct.id,
                     name: name,
                     price: price,
                     weight: weight,
@@ -63,7 +63,7 @@ function AddProductModal({open, onClose}) {
         } else {
             setProduct({});
         }
-    }, [name, setName, price, setPrice, weight, setWeight, stDate, setStDate, enDate, setEnDate])
+    }, [name, price, weight, stDate, enDate])
 
     useEffect(() => {
         if (Object.keys(product).length > 0) {
@@ -129,8 +129,7 @@ function AddProductModal({open, onClose}) {
     };
 
     const onEditProduct = () => {
-        alert('Need working');
-        dispatch(cancelEditProduct());
+        dispatch(saveEditProduct(product));
         onClose();
     };
 

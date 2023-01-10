@@ -30,6 +30,7 @@ const productsSlice = createSlice({
                         item[key] = payload[key];
                     });
                 }
+                return item;
             });
             state.editProduct = {};
         },

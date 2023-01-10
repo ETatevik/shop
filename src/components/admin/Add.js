@@ -2,8 +2,13 @@ import React from 'react';
 import {Grid, TextField} from "@mui/material";
 import {translations} from "../../utils/config";
 import DatePicker from "./DatePicker";
+import {isEmpty} from "../../utils/help";
+import {useSelector} from "react-redux";
 
 function Add({name, setName, price, setPrice, weight, setWeight, stDate, setStDate, enDate, setEnDate}) {
+    const editProduct = useSelector(state => state.products.editProduct);
+    const disabled = !isEmpty(editProduct);
+
     return (
         <>
             <Grid item sx={12} md={2}>
@@ -15,6 +20,7 @@ function Add({name, setName, price, setPrice, weight, setWeight, stDate, setStDa
                     label={translations.NAME}
                     value={name}
                     onChange={e => setName(e.target.value)}
+                    disabled={disabled}
                 />
             </Grid>
             <Grid item sx={12} md={2}>
@@ -40,7 +46,8 @@ function Add({name, setName, price, setPrice, weight, setWeight, stDate, setStDa
                 />
             </Grid>
             <Grid item sx={12} md={4}>
-                <DatePicker startDate={stDate} endDate={enDate} handleChangeStartDate={setStDate} handleChangeEndDate={setEnDate} />
+                <DatePicker startDate={stDate} endDate={enDate} handleChangeStartDate={setStDate}
+                            handleChangeEndDate={setEnDate}/>
             </Grid>
         </>
     );

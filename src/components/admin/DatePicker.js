@@ -13,8 +13,8 @@ const DatePicker = ({startDate, endDate, handleChangeStartDate, handleChangeEndD
     const [value, setValue] = React.useState([startDate, endDate]);
 
     useEffect(() => {
-        if(value[0]) handleChangeStartDate(value[0]?.$d);
-        if(value[1]) handleChangeEndDate(value[1]?.$d)
+        if(value[0]) handleChangeStartDate(value[0]?.$d || value[0]);
+        if(value[1]) handleChangeEndDate(value[1]?.$d || value[1])
     }, [value, setValue]);
 
     return (
